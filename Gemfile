@@ -30,7 +30,7 @@ gem 'jbuilder'
 gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'will_paginate', '~> 3.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -54,7 +54,7 @@ group :development do
   gem 'spring-watcher-listen'
   gem 'annotate'
   gem 'rails-erd'
-  gem 'will_paginate', '~> 3.1.0'
+
 end
   gem 'pg','~>0.21'
   gem 'rails_12factor', group: :production
