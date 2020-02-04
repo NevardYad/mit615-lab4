@@ -54,10 +54,11 @@ group :development do
   gem 'spring-watcher-listen'
   gem 'annotate'
   gem 'rails-erd'
+  gem 'will_paginate', '~> 3.1.0'
 end
   gem 'pg','~>0.21'
   gem 'rails_12factor', group: :production
-  gem 'will_paginate', '~> 3.1.0', group: :sans
+
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
