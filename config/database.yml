@@ -11,14 +11,14 @@ development:
  password:
 
 test:
-  <<: *default
-   host: <%= ENV['POSTGRES_HOST'] ||= 'db' %>
-   username: <%= ENV['POSTGRES_USER'] ||= 'postgres' %>
-   password: <%= ENV['POSTGRES_PASSWORD'] ||= '' %>
+ <<: *default
+ host: <%=ENV['POSTGRES_HOST'] ||= 'db' %>
+ username: <%=ENV['POSTGRES_USER'] ||= 'postgres' %>
+ password: <%=ENV['POSTGRES_PASSWORD'] ||= '' %>
  database: bleater-test
 
 production:
  <<: *default
-  databasE: bleater
-  username: bleater
-  password: <%= ENV['MYAPP_DATABSE_PASSWORD'] %>
+ database: bleater
+ username: bleater
+ password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
