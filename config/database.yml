@@ -1,24 +1,24 @@
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %>
+ adapter: postgresql
+ encoding: unicode
+ pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %>
 
 development:
-  <<: *default
-  database: bleater-dev
-  host: db
-  username: postgres
-  password:
+ <<: *default
+ database: bleater-dev
+ host: db
+ username: postgres
+ password:
 
 test:
   <<: *default
-    host: <%= ENV['POSTGRES_HOST'] ||= 'db' %>
-    username: <%= ENV['POSTGRES_USER'] ||= 'postgres' %>
-    password: <%= ENV['POSTGRES_PASSWORD'] ||= '' %>
-  database: bleater-test
+   host: <%= ENV['POSTGRES_HOST'] ||= 'db' %>
+   username: <%= ENV['POSTGRES_USER'] ||= 'postgres' %>
+   password: <%= ENV['POSTGRES_PASSWORD'] ||= '' %>
+ database: bleater-test
 
 production:
-  <<: *default
+ <<: *default
   databasE: bleater
   username: bleater
   password: <%= ENV['MYAPP_DATABSE_PASSWORD'] %>
